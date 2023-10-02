@@ -1,18 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjvdmnbj44w6x"]
+[gd_scene load_steps=8 format=3 uid="uid://bjvdmnbj44w6x"]
 
 [ext_resource type="Script" path="res://Brick/Brick.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dldhj2is8bg6k" path="res://Assets/brick3.png" id="2_b8m3m"]
+[ext_resource type="Texture2D" uid="uid://wihxn75adfya" path="res://Assets/particleCartoonStar.png" id="3_fpr0f"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(90, 30)
 
+[sub_resource type="Curve" id="Curve_m6wgw"]
+_data = [Vector2(0.00549451, 0.526316), 0.0, 0.0, 0, 0, Vector2(0.510989, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0526316), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_pdc4f"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_um8b1"]
+min_value = -1.0
+_data = [Vector2(0.0327103, -0.936842), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Brick" type="StaticBody2D"]
 script = ExtResource("1")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -45.0
-offset_top = -15.0
-offset_right = 45.0
-offset_bottom = 15.0
+[node name="ColorRect" type="Sprite2D" parent="."]
+texture = ExtResource("2_b8m3m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
+
+[node name="Confetti" type="CPUParticles2D" parent="."]
+position = Vector2(50, -10)
+emitting = false
+amount = 15
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.5
+texture = ExtResource("3_fpr0f")
+emission_shape = 3
+emission_rect_extents = Vector2(45, 15)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+scale_amount_min = 0.0
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_m6wgw")
+color_ramp = SubResource("Gradient_pdc4f")
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("Curve_um8b1")
