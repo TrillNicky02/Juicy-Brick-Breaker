@@ -1,4 +1,4 @@
-# Project-3.1-Juicy-Brick-Breaker
+# Project3-Part1-Juicy-Brick-Breaker
 
 Exercise for MSCH-C220
 Sept 30, 2023
