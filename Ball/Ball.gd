@@ -37,7 +37,6 @@ func _on_Ball_body_entered(body):
 	if body.has_method("hit"):
 		body.hit(self)
 		accelerate = true	
-		#$Highlight.modulate.a = 1.0
 		
 	if tween:
 		tween.kill()
@@ -48,9 +47,6 @@ func _on_Ball_body_entered(body):
 	tween.tween_property($Highlight, "scale", Vector2(1.0,1.0),time_highlight_size).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_IN)
 	wobble_direction = linear_velocity.orthogonal().normalized()
 	wobble_amplitude = wobble_max
-		
-		
-		
 		
 
 func _input(event):
