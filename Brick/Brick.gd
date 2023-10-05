@@ -13,6 +13,7 @@ var time_s = 1.2
 var time_v = 1.5
 var tween
 
+
 var sway_amplitude = 3.0
 var sway_initial_position = Vector2.ZERO
 var sway_randomizer = Vector2.ZERO
@@ -25,11 +26,13 @@ func _ready():
 	randomize()
 	position = new_position
 	
+
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	position.x = new_position.x
 	position.y = -100
 	tween = create_tween()
 	tween.tween_property(self, "position", new_position, 0.5 + randf()*2).set_trans(Tween.TRANS_BOUNCE)
+
 	
 	
 	if score >= 100:
@@ -56,6 +59,7 @@ func _ready():
 	sway_initial_position = $ColorRect.position
 	sway_randomizer = Vector2(randf()*6-3.0, randf()*6-3.0)
 		
+
 
 func _physics_process(_delta):
 	if dying and not $Confetti.emitting:

@@ -21,7 +21,9 @@ var wobble_direction = Vector2.ZERO
 var decay_wobble = 0.15
 
 var distort_effect = 0.0002
+
 var h_rotate = 0.0
+
 
 func _ready():
 	contact_monitor = true
@@ -39,7 +41,7 @@ func _on_Ball_body_entered(body):
 		body.hit(self)
 		accelerate = true	
 		
-		
+
 	if tween:
 		tween.kill()
 	tween = create_tween().set_parallel(true)
@@ -50,7 +52,7 @@ func _on_Ball_body_entered(body):
 	wobble_direction = linear_velocity.orthogonal().normalized()
 	wobble_amplitude = wobble_max
 		
-		
+
 		
 		
 
@@ -109,6 +111,7 @@ func distort():
 	$ColorRect.rotation = linear_velocity.angle()
 	$Highlight.scale = direction
 	
+
 	
 func comet():
 	h_rotate = wrapf(h_rotate+0.01, 0, 1)
@@ -122,3 +125,4 @@ func comet():
 	
 	
 	
+

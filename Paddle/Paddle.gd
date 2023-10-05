@@ -30,9 +30,11 @@ func _input(event):
 func hit(_ball):
 	$Highlight.modulate.a = 1.0
 	$Confetti.emitting = true
+
 	var Sound_Paddle = get_node("/root/Game/Sound_Paddle")
 	Sound_Paddle.play()
 	
+
 	if tween:
 		tween.kill()
 	tween = create_tween().set_parallel(true)
@@ -40,6 +42,7 @@ func hit(_ball):
 	tween.tween_property($Highlight, "modulate:a", 0.0, time_highlight)
 	$Highlight.scale = Vector2(1.5, 1.5)
 	tween.tween_property($Highlight, "scale", Vector2(1.0,1.0), time_highlight_size).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_IN)
+
 
 
 func powerup(payload):
