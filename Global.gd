@@ -16,6 +16,9 @@ var feverish = false
 var default_starting_in = 4
 var default_lives = 5
 
+var sway_index = 0
+var sway_period = 0.1
+
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	randomize()
@@ -30,6 +33,8 @@ func _physics_process(_delta):
 		update_fever(-fever_decay)
 	else:
 		feverish = false
+		
+	sway_index += sway_period
 		
 
 func _input(event):
@@ -68,6 +73,8 @@ func update_score(s):
 		HUD.update_score()
 
 func update_lives(l):
+	var Sound_Die = get_node("/root/Game/Sound_Die")
+	Sound_Die.play()
 	lives += l
 	var HUD = get_node_or_null("/root/Game/UI/HUD")
 	if HUD != null:

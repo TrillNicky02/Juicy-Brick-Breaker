@@ -16,14 +16,14 @@ var levels = [
 		"layout_start":Vector2(125,105),
 		"layout_spacing":Vector2(100,40),
 		"bricks":{
-			100:"res://Brick/Brick.tscn",
-			90:"res://Brick/Brick.tscn",
-			80:"res://Brick/Brick.tscn",
-			70:"res://Brick/Brick.tscn",
-			60:"res://Brick/Brick.tscn",
-			50:"res://Brick/Brick.tscn",
-			40:"res://Brick/Brick.tscn",
-			30:"res://Brick/Brick.tscn",
+			100:"res://Brick/Brick1.tscn",
+			90:"res://Brick/Brick2.tscn",
+			80:"res://Brick/Brick3.tscn",
+			70:"res://Brick/Brick4.tscn",
+			60:"res://Brick/Brick5.tscn",
+			50:"res://Brick/Brick6.tscn",
+			40:"res://Brick/Brick7.tscn",
+			30:"res://Brick/Brick8.tscn",
 		},
 		"layout":[
 			[100,100,100,100,100,100,100,100,100,100]
@@ -51,14 +51,14 @@ var levels = [
 		"layout_start":Vector2(205,105),
 		"layout_spacing":Vector2(100,40),
 		"bricks":{
-			100:"res://Brick/Brick.tscn",
-			90:"res://Brick/Brick.tscn",
-			80:"res://Brick/Brick.tscn",
-			70:"res://Brick/Brick.tscn",
-			60:"res://Brick/Brick.tscn",
-			50:"res://Brick/Brick.tscn",
-			40:"res://Brick/Brick.tscn",
-			30:"res://Brick/Brick.tscn",
+			100:"res://Brick/Brick1.tscn",
+			90:"res://Brick/Brick2.tscn",
+			80:"res://Brick/Brick3.tscn",
+			70:"res://Brick/Brick4.tscn",
+			60:"res://Brick/Brick5.tscn",
+			50:"res://Brick/Brick6.tscn",
+			40:"res://Brick/Brick7.tscn",
+			30:"res://Brick/Brick8.tscn",
 		},
 		"layout":[
 			[0,100,100,100,100,100,100,0]
@@ -86,7 +86,7 @@ var levels = [
 		"layout_start":Vector2(205,105),
 		"layout_spacing":Vector2(100,40),
 		"bricks":{
-			100:"res://Brick/Brick.tscn",
+			100:"res://Brick/Brick1.tscn",
 		},
 		"layout":[
 			[100,100,100,100,100,100,100,100]
