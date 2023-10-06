@@ -1,7 +1,7 @@
-# Project3-Part2-Juicy-Brick-Breaker
+# Project3-Part3-Juicy-Brick-Breaker
 
 Exercise for MSCH-C220
-Oct3, 2023
+Oct 5, 2023
 
 More steps in adding "juicy" features to a simple brick-breaker game.
 
@@ -12,15 +12,12 @@ Move the paddle using the mouse. Help the ball break all the bricks before you r
 
 ## Implementation
 
-In this version many interesting features were implemented
-* Animation and ordering of the Bricks appearing at the beginning of the level. Tweening was used
-* Animation of the bricks producing confetti and falling when they are hit. Tweening was used,
-* Distortion of the ball as it moves and collides. Tweening was used
-* Animation of the paddle as it moves and hits the ball. Tweening was used
-* The paddle growing at times into a giant paddle as it moves. Tweening was used
-* The Animation of the lives indicators. Tweening was used.
-* Screen Shake was implemented as the ball hits the ground, Tweening was used.
-* 
+In this version many many more interesting features  were implemented
+* I implemented the AudioStreamPlayer
+* I added 3 pieces of music to be played for the 3 different game levels. I created music1 and music2 myself, and music3 was downloaded from freesound.org
+* I created 3 soundeffects for the paddle, the brick and the wall. I downloaded the soundeffect for the Sound_Die from freesound.org
+* I implimented the Comet Trail effect for the ball
+* I implimented the Swaying effect of the bricks
 
 
 ## References
@@ -29,11 +26,13 @@ In this version many interesting features were implemented
  * [League Gothic Typeface](https://www.theleagueofmoveabletype.com/league-gothic)
  * [Orbitron Typeface](https://www.theleagueofmoveabletype.com/orbitron)
  * Scrren Shake technique developped by Squirrel Eiserloh and KidsCanCode
+ * music3 was obtained from Freesound.org created by Migfus20 under the Attribution 4.0 License.
+ * the sound Arcade Die from Freesound.org was created by Aesterial-Arts under the Attribution 4.0 License.
  
 
 ## Future Development
 
-Background Picture, More Tweening, Screen Shake, Adding a face, Comet trail, Music and Sound, Shaders, etc.
+More Special Effects
 
 
 ## Created by
