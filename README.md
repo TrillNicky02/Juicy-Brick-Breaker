@@ -15,7 +15,7 @@ Move the paddle using the mouse. Help the ball break all the bricks before you r
 From the original Game this is what i added in this project
 * The game has 3 differnt Levels.
 * I replaced the Balls and Paddle with others I created.
-* I  to created special effects to  briefly highlight the Ball and Paddle when collisions occur
+* I created special effects to  briefly highlight the Ball and Paddle when collisions occur
 * I created UI Themes for the project, improved the typeface, created themes to improve the Menus and HUD
 * I added particles to the game.
 * I replaced the original white rectangles  for the Bricks with nice colored brick sprites and used different Bricks for different point values.
@@ -27,6 +27,7 @@ From the original Game this is what i added in this project
 * I implemented a special effect that causes the Screen to Shake when a falling ball causes an icon in the Lives Indicator to die and disappear.
 * I implemented an animation special effect at the beginning of the game that makes the Bricks appear like if they were falling from above.
 * I implemented an AudioStreamPlayer
+* I Implemented a Camera
 * I added 3 pieces of music to be played for the 3 different Game Levels. I created music1 and music2 myself, and music3 was downloaded from freesound.org
 * I created 3 soundeffects for the Paddle, the Brick and the Wall when they collide with the Ball. I downloaded the soundeffect for the Sound_Die from freesound.org to play when an icon disappears on the Lives Indicator
 * I implemented the Comet Trail effect for the ball.
