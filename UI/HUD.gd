@@ -4,6 +4,10 @@ var indicator_margin = Vector2(25, 25)
 var indicator_index = 25
 var Indicator = load("res://UI/Indicator.tscn")
 
+var fever_h = 150.0
+var fever_s = 150.0
+var fever_v = 150.0
+
 #Start NEW CODE
 var indicator_mod = 0.0
 var indicator_mod_start = 0.0
@@ -58,6 +62,10 @@ func breathe():
 	
 func update_fever():
 	$Fever.value = Global.fever
+	var styleBox = $Fever.get("theme_override_styles/fill")
+	styleBox.bg_color.h = fever_h
+	styleBox.bg_color.s = (Global.fever / 100.0) * fever_s
+	styleBox.bg_color.v = (fever_v/2) + ((Global.fever / 100.0) * (fever_v/2)) 	
 	
 	
 

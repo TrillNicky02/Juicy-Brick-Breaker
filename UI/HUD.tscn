@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://do7pdpjxteg8e"]
+[gd_scene load_steps=6 format=3 uid="uid://do7pdpjxteg8e"]
 
 [ext_resource type="Script" path="res://UI/HUD.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://c6dgcm63gh2db" path="res://Assets/Orbitron Black.ttf" id="2_5buua"]
+[ext_resource type="Shader" path="res://Effects/HUD.gdshader" id="3_78roh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2yndy"]
+shader = ExtResource("3_78roh")
+shader_parameter/fireMovement = Vector2(-0.01, -0.5)
+shader_parameter/distortionMovement = Vector2(-0.01, -0.3)
+shader_parameter/normalStrength = 40.0
+shader_parameter/distortionStrength = 0.1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcq8y"]
+bg_color = Color(0, 1, 0.0833333, 1)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -48,6 +59,8 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Fever" type="ProgressBar" parent="."]
+material = SubResource("ShaderMaterial_2yndy")
+use_parent_material = true
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -57,6 +70,7 @@ offset_top = 10.0
 offset_right = 150.0
 offset_bottom = 37.0
 grow_horizontal = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_pcq8y")
 show_percentage = false
 
 [node name="Indicator_Container" type="Control" parent="."]
